@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-        <link rel="stylesheet" href=".\static\css\styles.css">
+        <link rel="stylesheet" href=".\static\css\weather.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -15,16 +15,63 @@
                 <br>
                 <img src=".\static\Images\Login.PNG" alt="Login/Root Page">
             </ul>
+                <li>Accesses the mongodb database, via a springboot backend endpoint to check credentials.</li>
+                <li>Allows the user to search towns via search option.
+                    <ol>Converts town names into zipcodes</ol>
+                    <ol>If a zipcode/town name is invalid, will catch the error and notify the user on the town page.</ol>
+                </li>
+                <li>Access registration page, to make a new unique account.</li>
+
             <ul>/register
                 <br>
-                <img src=".\static\Images\Register.PNG" alt="Login/Root Page">
+                <img src=".\static\Images\Register.PNG" alt="Register Page">
             </ul>
-            <ul>/town?searched_town=</ul>
-            <ul>/home</ul>
-            <ul>/edit_profile</ul>
-            <ul>Springboot Backend</ul>
-            <ul>Flask</ul>
+                <li>Requires unique username and email.</li>
+                <li>Requires all data be filled out before attempting to register.</li>
+
+            <ul>/town?searched_town=
+                <br>
+                <img src=".\static\Images\Town.PNG" alt="Town Page">
+            </ul>
+                <li>Allows user to search for towns on dashboard bar.</li>
+                <li>Queries data for searched town, and displays the weekly outlook.</li>
+                <li>Shows active weather alerts for the town.</li>
+                <li>Home navigation button:
+                    <ol>If logged in, it will take you to your home page.</ol>
+                    <ol>Otherwise, it will take you back to the root/login page.</ol>
+                </li>
+                
+            <ul>/home
+                <br>
+                <img src=".\static\Images\Home page.PNG" alt="Home Page">
+            </ul>
+                <li>Queries weather data for home location (modifyable in edit_profile page)</li>
+                <li>Allows you to add or remove a list of towns from your favorites list (searchable by their ip adress)</li>
+                <li>Displays username, along with avatar (both modifyable in edit_profile page)</li>
+
+            <ul>/edit_profile
+                <br>
+                <img src=".\static\Images\Edit Profile.PNG" alt="Options Page">
+            </ul>
+                <li>Allows the user to log out.</li>
+                <li>Allows the user to change the following things:
+                    <ol>Username (must be unique)</ol>
+                    <ol>Password</ol>
+                    <ol>Home Town</ol>
+                    <ol>Avatar</ol>
+                </li>
+
+            <ul><h2>Technologies</h2>
+                <ul>Springboot Backend</ul>
+                <ol>Communicates with mongodb, and performs CRUD operations on user data.</ol>
+                <ul>Flask</ul>
+                <ol>Uses endpoints from the Springboot backend.</ol><br>
+                <ol>Communicates with weather api and accesses the weather data, as well as performing checks on town names and zip codes.</ol><br>
+                <ol>Responisble for route logic, and properly gathering data for displaying on pages.</ol>
+            </ul>
 
         </div>
+
+        <div><a href="./index">Back</a></div>
     </body>
 </html>
