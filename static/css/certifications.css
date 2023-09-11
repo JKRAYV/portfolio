@@ -1,0 +1,89 @@
+body, div, h1, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #ffffff, #c067ff);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    background-color: #a74bd2;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: 5px solid #8b47d4;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.75em;
+    border-radius: 10px;
+}
+
+div {
+    background-color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    padding: 15px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 70%;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border-left: 5px solid #8b47d4;
+    border-right: 5px solid #8b47d4;
+}
+
+div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.2);
+}
+
+a {
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #adadad;
+}
+
+ul {
+    background-color: #dac9ed;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    margin: 20px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 15px;
+}
+
+li > p {
+    margin-left: 20px; 
+}
