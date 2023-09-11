@@ -1,0 +1,66 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href=".\static\css\fifa.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <a href="https://github.com/sumanavardhan/Capstone_Project">Capstone Project</a>
+            <h2>Features</h2>
+            <ul>Capstone Home page
+                <br>
+                <img src=".\static\Images\CAP\CApstone home.PNG" alt="home page">
+            </ul>
+                <li>Once logged in, the user could add an entry, query the data, or view the live tableau dashboard.</li>
+
+            <ul>Add New Entry Page
+                <br>
+            </ul>
+                <li>If the user chose to add entry the user would have a form to fill that would require:
+                    <ol>Age</ol>
+                    <ol>Gender</ol>
+                    <ol>Education Level</ol>
+                    <ol>Job Title</ol>
+                    <ol>Years of Experience</ol>
+                    <ol>Salary</ol>
+                </li>
+                <li>Upon successful insertion into the dynamodb database, an id would be assigned.</li>
+
+            <ul>Query Data Page
+                <br>
+            </ul>
+                <li>The user is prompted to enter an id.</li>
+                <li>The respective data will be displayed.</li>
+                
+                
+            <ul>View Dashboard Page
+                <br><img src=".\static\Images\CAP\Tab Ex.PNG" alt="top5 wage">
+                
+            </ul>
+                <li>Above, I included a snippet of one of the charts on the dashboard.</li>
+                <li>Was a live connection between dynamodb database and tableau, utilizing an aws endpoint.</li>
+                <li>Included many different charts and graphs, that as updated by a user, would automatically adjust onto the charts.</li>
+
+            <ul><h2>Technologies</h2>
+                <ul>Pandas</ul>
+                    <ol>Utilizes dataframes/series to organize data into queryable tables in python.</ol>
+                    <ol>Primarily used for data cleaning.</ol>
+                <ul>Flask</ul>
+                    <ol>Used to orcestrate the page routes.</ol>
+                <ul>Tableau Desktop</ul>
+                    <ol>Connected to AWS Dynamodb endpoint for live data connection.</ol>
+                <ul>AWS API & Lambda</ul>
+                    <ol>Used to communicated the the AWS dynamodb databases which stored user data, as well as statistical data.</ol>
+                    <ol>CRUD operations performed to retreieve and insert data.</ol>
+                
+            </ul>
+
+        </div>
+
+        <div><a href="./index">Back</a></div>
+    </body>
+</html>
